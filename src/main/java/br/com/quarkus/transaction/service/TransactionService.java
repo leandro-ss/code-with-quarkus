@@ -18,6 +18,15 @@ import br.com.quarkus.transaction.service.usecase.MergeTransactionUseCase;
 import static java.util.Optional.ofNullable;
 
 
+/**
+ * Classe principal resposanvel por sincronizar os dados e enviar para o legado
+ * ainda com uma ideia de rascunho, mas já usavel - useCase precisa ser evoluido pra facilitar o testes
+ * Rotina de callback a partir do legado seria responsavel por remover dados de sincronia
+ *
+ * Ideia eh basicamente ter alertas para possiveis processos em andamento
+ *
+ * Alem de ser ideia base para base de consulta a estar disponivel a partir dos insumos do legado
+ */
 @Transactional
 @ApplicationScoped
 public class TransactionService {

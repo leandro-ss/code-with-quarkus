@@ -17,6 +17,8 @@ import br.com.quarkus.domain.base.TransactionType;
 
 /**
  * Classe Responsavel por representar os dados vindo de um dos canais disponiveis pelo cliente
+ *
+ * Ideia bem a nivel de rascunho
  */
 public class BankingTransaction implements BaseEntity {
     private static final long serialVersionUID = 1L;

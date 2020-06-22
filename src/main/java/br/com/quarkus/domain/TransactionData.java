@@ -17,7 +17,7 @@ import br.com.quarkus.domain.base.BaseEntity;
  * da area de prevencao de fraudes, atuando também como um Wrappper, o dado estaria dispónviel de forma
  * efemera através de um TTL a ser configorado no redis, sendo passivel de consulta/atualizacao por qualquer outra instancia
  *
- *
+ * Ideia bem a nivel de rascunho
  */
 @REntity
 public class TransactionData implements BaseEntity {

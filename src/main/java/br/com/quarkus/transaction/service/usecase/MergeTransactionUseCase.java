@@ -8,6 +8,10 @@ import br.com.quarkus.domain.TransactionData;
 import br.com.quarkus.domain.BankingTransaction;
 import br.com.quarkus.base.usecase.UseCase;
 
+/**
+ * ideia rascunho, ainda necessitaria trabalhar com CDI,
+ * usavel mas dificil testar da forma que esta
+ */
 public class MergeTransactionUseCase implements UseCase<TransactionData> {
 
     private final BankingTransaction transactionBanking;

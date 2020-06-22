@@ -13,7 +13,7 @@ import br.com.quarkus.domain.TransactionData;
  * De qualquer forma ainda devendo ser implementado
  */
 @ApplicationScoped
-public class LegacyAdapterMainFrame implements SendAdapter<TransactionData> {
+public final class LegacyAdapterMainFrame implements SendAdapter<TransactionData> {
     private static final Logger LOGGER = LoggerFactory.getLogger(LegacyAdapterMainFrame.class);
 
     public void send(TransactionData transactionData){

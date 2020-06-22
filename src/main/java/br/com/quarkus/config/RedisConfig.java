@@ -13,6 +13,9 @@ import javax.ws.rs.Produces;
 
 import br.com.quarkus.domain.BankingTransaction;
 
+/**
+ * Soh pra fazer funcionar
+ */
 @Dependent
 public class RedisConfig {
 
