@@ -11,13 +11,11 @@ import org.redisson.api.RLiveObjectService;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import javax.inject.Inject;
 
 import br.com.quarkus.domain.BankingTransaction;
 import br.com.quarkus.domain.TransactionData;
 import br.com.quarkus.transaction.legacy.LegacyAdapterMainFrame;
 
-import io.quarkus.test.Mock;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.junit.mockito.InjectMock;
 
@@ -37,8 +35,10 @@ public class TransactionServiceTest {
     private static final long CLIENT_KEY = 1L;
     private static final BigDecimal TRANSACTION_VALUE = BigDecimal.TEN;
     private static final LocalDateTime TRANSACTION_DATE_TIME = of(2020, 6, 20, 0, 0);
+
     @InjectMock
     private TransactionService transactionService;
+
     private static RLiveObjectService rLiveObjectService;
     private static LegacyAdapterMainFrame legacyAdapterMainFrame;
     private BankingTransaction bankingTransaction;

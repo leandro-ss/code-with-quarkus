@@ -1,43 +1,5 @@
 version: '3.5'
 
-services:
-  mysql-db:
-    build:
-      context: mysql-db
-    ports:
-      - "3306:3306"
-
-  elasticsearch:
-    build:
-      context: elasticsearch
-    volumes:
-      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-
-  kibana:
-    build:
-      context: kibana
-    volumes:
-      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
-    ports:
-      - "5601:5601"
-    depends_on:
-      - elasticsearch
-
-  apm-server:
-    build:
-      context: apm-server
-    volumes:
-      - ./apm-server/config/apm-server.yml:/usr/share/apm-server/config/apm-server.yml:ro
-    ports:
-      - "8200:8200"
-    depends_on:
-      - elasticsearch
-
   redis:
     build:
       context: redis
